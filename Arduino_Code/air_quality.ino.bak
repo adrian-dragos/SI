@@ -57,7 +57,7 @@ void setup() {
   pinMode(sensorPin, INPUT);
   dht.begin();
   Genotronex.begin(9600);
-  Genotronex.println("Bluetooth On...");
+  Genotronex.println("Bluetooth On please press 1 or 0 blink LED ..");
 } 
 
 void loop() {
