@@ -1,4 +1,4 @@
-# SI
+# How to run
 
 Ensure that you have node 16.14.2+ version installed and angular 13.0+ installed
 Ensure that you have python 3.10.4+ installed
