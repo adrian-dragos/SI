@@ -1,0 +1,11 @@
+<div id="chart">
+  <div class="location"> <b><u>UPT. Corpul B. Sala 413.</u></b></div>  
+  <div class="temp"> Temperature: {{temp | number : '1.2-2'}} &#8451;</div>  
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [plotOptions]="chartOptions.plotOptions"
+    [labels]="chartOptions.labels"
+    [fill]="chartOptions.fill"
+  ></apx-chart>
+</div>
