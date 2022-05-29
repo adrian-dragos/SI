@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, NgModuleDecorator, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 
@@ -29,9 +29,10 @@ export class AppComponent implements OnInit{
   @ViewChild("chart") chart: ChartComponent;
 
   public chartOptions: Partial<ChartOptions>;
-  private url: string = 'http://localhost:5000/companies';
+  private url: string = 'http://localhost:5000/data';
   private co2: number;
   public temp: number;
+  public humidity: number;
   private maxTemp = 50;
   private minTemp = -20;
   private maxCO2 = 1200;
@@ -55,9 +56,11 @@ export class AppComponent implements OnInit{
     this.getCompanies().subscribe(
       (data) => {
         console.log(data),
-        this.co2 = this.getRandomCO2(),
+        this.co2 = data[0].CO2, //this.getRandomCO2(),
         this.initChar(),
-        this.temp = this.getRandomTemperature()
+        this.temp = data[0].Temp,
+        this.humidity = data[0].Humidity
+        //this.getRandomTemperature()
       }
     );
   }

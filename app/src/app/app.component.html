@@ -1,6 +1,7 @@
 <div id="chart">
-  <div class="location"> <b><u>UPT. Corpul B. Sala 413.</u></b></div>  
-  <div class="temp"> Temperature: {{temp | number : '1.2-2'}} &#8451;</div>  
+  <div class="location"> <b><u>UPT. Corpul B. Sala 413B.</u></b></div>  
+  <div class="temp"> Temperature: {{temp | number : '1.2-2'}} &#8451;<br> Humidity: {{humidity | number : '1.2-2'}} %</div>
+
   <apx-chart
     [series]="chartOptions.series"
     [chart]="chartOptions.chart"
