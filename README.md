@@ -5,7 +5,7 @@ Ensure that you have python 3.10.4+ installed <br>
 Ensure that you have pip installed 22.1.1+ <br>
 
 1) open terminal in the folder that is cloned
-2) <br>``` pip install flask```
+<br>``` pip install flask```
 <br>``` pip install -U flask-cors```
 
 2) in terminal
